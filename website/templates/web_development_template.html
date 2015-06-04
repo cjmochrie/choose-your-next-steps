@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Web Development</h1>
+
+<div class="section">
+	<h2 id="overview">Overview</h2>
+	<p>Steve Huffman's web development project focused on the back-end of web apps. Some of the main things explored and that I (hope) I am now able to implement are:
+		<ul>
+			<li>The GAE Datastore - for the final wiki project I implemented a 'One to Many' Reference Property to keep multiple wiki revisions referenced to each Wiki object. The relevent reference page is <a href="https://cloud.google.com/appengine/articles/modeling">here</a></li>
+			<li>User security - I really enjoyed this section, learning to use secure cookies, password hashing and salting, and more usage of the Datastore to implement a User database, logins, and different webapp behavior for logged in and 'guest' users.</li>
+			<li>Class methods - a small topic, but a neat way of increasing abstraction away from how data is structured inside objects.</li>
+			<li>APIs - Most of my notes are on how to implement JSON and producing content that can be easily read by a machine.</li>
+			<li>Caching - I can tell this material is incredibly important for moving beyond toy apps, but given its use doesn't actually offer any additional functionality it's hard to get excited about. Learned about various caching techniques and how to use memcache.</li>
+			<li>Scaling up and story-time - This was interesting and a nice break from coding. After the course it's great to hear about managed hosting, caching, pre-computes, etc. with a little more context in mind. Steve's history building Reddit was also enjoyable.</li>
+			<li>Final project - personal wiki. Mine is <a href="http://wiki-962.appspot.com/">here</a>. Beating the autograder eluded me, but it was enjoyable to build and make use of the techniques learned in the earlier lessons. I tried for the bonus functionality and got pretty close before I decided to move on.</li>
+		</ul>
+	</p>
+
+</div>
+
+{% endblock %}

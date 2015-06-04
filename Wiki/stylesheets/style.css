@@ -1,0 +1,28 @@
+body {
+	font-family: sans-serif;
+	color: #19446e; /*brownish yellow */
+	background-color: #eee; /*-grey */
+
+}
+
+.main-container {
+	width: 1000px;
+	background-color: white;
+	position: center;
+	margin: auto;
+	padding: 10px;
+}
+
+.label {
+	text-align: right
+}
+
+.error {
+	color: red
+}
+
+.footer{
+	padding: 5px;
+	text-align: center;
+
+}

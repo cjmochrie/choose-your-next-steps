@@ -1,0 +1,27 @@
+<!-- Base template -->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cameron's wiki</title>
+		<meta charset="utf-8">
+  		<!--Insert style sheet here-->
+  		<link type="text/css" rel="stylesheet" href="/stylesheets/style.css"/>
+	</head>
+
+	<body>
+		<div class = "main-container">
+			<div class="header" align='right'>
+				Logged in as {{username}}
+			</div>
+
+			{% block content %}
+			{% endblock %}
+
+			<!--Basic footer keeps track of all the pages-->
+			<div class="footer">
+				<a href="/">Home</a>  <a href="/signup"> Signup</a> <a href="/login"> Login</a> <a href='/logout'> Logout</a>
+			</div>
+		</div>
+	</body>
+</html>

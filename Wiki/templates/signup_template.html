@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+    <h2>Signup</h2>
+    <form method="post">
+      <table>
+        <tr>
+          <td class="label">
+            Username
+          </td>
+          <td>
+            <input type="text" name="username" value={{username}}>
+          </td>
+          <td class="error">
+          	{% if valid_username  == False %}
+          		That's not a valid username.
+          	{% endif %}
+            {% if username_not_taken == False %}
+              That username is taken.
+            {% endif %}
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Password
+          </td>
+          <td>
+            <input type="password" name="password">
+          </td>
+          <td class="error">
+			{% if valid_password  == False %}
+          		That's not a valid password.
+          	{% endif %}
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Verify Password
+          </td>
+          <td>
+            <input type="password" name="verify">
+          </td>
+          <td class="error">
+			{% if passwords_match == False %}
+          		Your passwords didn't match.
+          	{% endif %}
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Email (optional)
+          </td>
+          <td>
+            <input type="text" name="email" value={{email}}>
+          </td>
+          <td class="error">
+			{% if valid_email  == False %}
+          		That's not a valid email.
+          	{% endif %}
+          </td>
+        </tr>
+      </table>
+
+      <input type="submit">
+    </form>
+  </body>
+
+{% endblock %}

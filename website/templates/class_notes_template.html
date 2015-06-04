@@ -1,0 +1,303 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> Intro to Programming Unit 1</h1>
+
+<div class="section">
+	<h2 id="how-the-web-works"> How the Web Works</h2>
+
+	  	<p>The web is a network of computers connected together. Servers deliver html files (which is a webpage) to users after an <em>HTTP request</em> is sent. The <em>web browser</em> translates the html code and displays the page.</p>
+</div>
+
+<div class="section">
+	<h2 id="html">HTML - Hypertext Markup Language</h2>
+
+	<p>HTML is the <em>language</em> of the web and tells web browsers what (and how) to display text/images/video etc. <b>Inline Tags</b> can make things <b>bold</b> or <em> italicized.</em> They look like this <code>&lt;tag&gt; content &lt;/tag&gt;</code>.</p>
+
+		<p>Block tags like <code>&lt;div&gt;</code>will seperate things into blocks.</p>
+		<p><em>Void</em> elements only have a start tag. They can do things like start a new line <code>&lt;br&gt;</code> or insert an image <code>&lt;img&gt;</code>. Because they don't enclose anything, you don't need a closing tag.</p>
+</div>
+
+<div class ="section">
+	<h2 id="lesson-1.2">1.2 Creating a Structured Document</h2>
+
+	<p>Front end development is always visual - you get immediate feedback. The key tools are <em> HTML, CSS, and Javascript</em>. HTML is the structure, CSS is the styling, and Javascript allows the page to be dynamic.</p>
+
+	<h2 id="tree-like-structure">The tree like structure of HTML</h2>
+
+	<p>HTML code consists of elements inside elements...inside elements. It is like a family tree with branches going down until only text or an image, or a form, or videoremains.</p>
+
+	<p>Indentation in HTML code tells you how far 'down the tree' you are. The further indented, the down you've gone. This structure allows 'child' elements to retain their parents' properties, otherwise known as 'inheritance'. For example, you may want every piece of text in a document to be a certain font, but certain sections be in a different color. The parent element would be assigned a font type, and all the children could be assigned a color. The end result is text in every 'child' box is of the <em>parent's</em> font and the <em>child's</em> color.</p>
+
+	<h2 id="text-editors">Text Editors</h2>
+	<p>Special text editors are used to hilight syntax, close tags, help with formatting or point out obvious errors. It's much easier to write code with them. Generally they help you see what the compiler or interpreter will see.</p>
+</div>
+
+<div class="section">
+	<h2 id="CSS-Style"> CSS Style and HTML Structure</h2>
+
+	<p>The first rule for HTML and CSS (and any other programming language) is <em>always avoid repetition.</em></p>
+
+	<p>Less repetition means fewer opportunities for mistakes (like variable typos or transcription errors), or revisions not propogating through the code (changing your mind on a color choice for example).</p>
+
+	<p>Repitition impairs <em>reusability</em> - its much easier to reuse code if it is general purpose. For example giving each <code>&lt;div&gt; </code> element its own attributes means that changing their attributes down the road will require changing each individually (as opposed to updating a style sheet that will format all the elements you want). It's also generally easy to read.</p>
+
+	<p>In CSS style sheets use selectors like <code>h1 p  em</code> to apply attributes to all content within those general purpose tags.</p>
+
+	<p>For more specific uses, identify <em>classes</em> with <code>.nameofclass</code>. This allows you to create custom sections with repeateable formatting</p>
+
+	<p>To include CSS code you can place it in the head of an html document with a <code>&lt;style&gt;</code> element. That's good for small documents.</p>
+
+	<p>Better for larger documents is to use a separate CSS file and use a <code>&lt;link&gt;</code> element with attributes: <code>"rel="stylesheet" type="text/css" href="nameoffile.css"</code>. This allows you to keep the CSS out of the way, and quickly update multiple HTML files by simply updating the CSS code they link to. <em>This reduces repitition</em></p>
+	</div>
+
+<div class="section">
+	<h2 id="box-model">The Box Model</h2>
+
+	<p> Everything in html exists in boxes. Margin is the space between boxes, border is the physical border, padding is the space added within the border, and content is the content.</p>
+
+	<p>There is much more beyond that, but it's a good starting point. Boxes can be sized in advance by you by the pixel, or they can dynamically update as a percentage of the available real estate on the viewer's browser.</p>
+</div>
+
+<div class="section">
+	<h2 id="error-correction">Error Correction</h2>
+
+	<p>HTML or CSS errors can turn up in many places. A ccommon error is forgetting to 'close' an element with a closing tag. Proper use of indentation can make it easier to spot some of these, for example forgetting to close a <code>&lt;div&gt;</code> tag.</p>
+
+	<p>Because HTML and CSS are so visual errors will often be immediately visible - it's much easier to track down a 'bug' when you can see where exactly things are going wrong on a page - in other programming languages it can be more difficult.</p>
+
+	<p>More subtle errors, like using deprecated syntax that may perform differently depending on the browser a visitor to your page is using, are best checked with an HTML validation service. A free HTML one is available <a href="http://validator.w3.org/#validate_by_input">here</a> and a CSS validator <a href="https://jigsaw.w3.org/css-validator/#validate_by_input">here</a>.</p>
+</div>
+
+<h1>Intro to Programming Stage 2</h1>
+
+<div class="section">
+	<h2 id="computer-machine">What's the difference between a computer and a machine?</h2>
+
+	<p>A machine, like a toaster can essentially do one thing: toast. It can toast a bagel or a slice of bread. It can lightly warm an english muffin or burn a piece of toast to a crisp, but at the end of day it will never order you a pizza. It is a machine.</p>
+
+	<p>A computer on the other hand, can literally do anything, provided enough time and the proper <em>program</em>. One type of a computer, a <a href="http://en.wikipedia.org/wiki/Universal_Turing_machine">Universal Turing Machine</a> was first described by Alan Turing in the 30s.</p>
+</div>
+
+<div class="section">
+	<h2 id="programs">Programs and programming languages</h2>
+
+	<p>Programs are what allow computers to do anything - they are series of instructions, if thens, loops, and so on which allow the computer to compute things.</p>
+
+	<p>They can be written in machine code - communicating directly with the transistors of a computer - but most often they are written in a programming language. A programming language, like Python which we are using, translates instructions written by a programmer into instructions that a computer can understand (0s and 1s).</p>
+
+	<p>All programming languages have their own grammar determining what instructions or set of instructions are "correct". Unfortunately (actually, fortunately), programming grammar is <em>very</em> strict. A compiler or interpreter won't just figure out what you mean if you make a small error like another English reader would if you made a typo like: "Today I went to the slore.". As a result, your computer code has to be perfect!</p>
+
+	<p>Python is one programming language. It is <em>high level</em>, that is, the code you right in Python is a long way from the computer hardware. You don't have to worry about bit shifting, or memory addressing for the most part.</p>
+
+	<p>A Python expression is defined by a recursive definition. This <a href="https://www.udacity.com/course/viewer#!/c-ud552-nd/l-3527838955/e-48704311/m-48736065">video</a> explains it.</p>
+</div>
+
+<div class="section">
+	<h2 id="variables">Variables in Python</h2>
+
+	<p>A variable is a location in memory that stores a value - we can give it a name so that it can easily be referred to and used. It could be a boolean, a number, a string etc. Python uses a <code>=</code> sign to <em>assign</em> a value on the right side of the equals sign to a variable on the left side.</p>
+
+	<p>Variables are useful because they can change and be computed on among other things. For example, a variable could be used to count things, like the number key words in a string.</p>
+
+	<p>Some simple variable declarations and manipulations follow</p>
+
+	<ul>
+		<li><code>my_name = "Cameron"</code> This assigns the string "Cameron" to the variable my_name</li>
+		<li><code>hours_per_week = 7 * 24</code> This assigns the value 168 to the variable hours_per_week</li>
+		<li><code>hours_per_year = hours_per_week * 52</code> Here we compute the hours in a year by multiplying a variable by a number (this assumes we previously assigned a value to the variable hours_per_week).</li>
+	</ul>
+</div>
+
+<div class="section">
+	<h2 id="functions">Functions in Python</h2>
+
+	<p>Functions take an input or inputs, does some sort of computation, then produces an output.</p>
+
+	<p>Function sin Python are defined as follows (using an example function with returns the 3rd, 5th, and 7th characters of a string - or '-1' if the string is shorter than 7 characters)</p>
+
+	<p><code>def thirdFifthSeventh(x):<br>
+	&nbsp;&nbsp;return x[2] + x[4] + x[6]</code>
+	</p>
+
+	<p>The previous code <em>makes</em> a function. Wecan <em>use</em> the function as follows:</p>
+
+	<p><code>print thirdFifthSeventh('ABCDEFGHIJKLMN')</code></p>
+
+	<p>The above code will output 'CFI'</p>
+</div>
+
+<div class="section">
+	<h2 id="why-use-functions">Why use functions?</h2>
+
+	<p>Functions allow you to reuse code endlessly. Once the function is defined it can be called as many times as you like. This avoids <em>repetition</em></p>
+</div>
+
+<div class="section">
+	<h2 id="logic-loops">Logic and Loops</h2>
+
+	<p>Logical expressions like <code>if a &lt; b then</code> allow programs to branch depending on an input.</p>
+
+	<p>Loops like <code>while i &lt; 10:</code> gives your programs the ability to repeat instructions. Given the speed of computers this is powerful.</p>
+</div>
+
+<div class="section">
+	<h2 id="debugging">Debugging</h2>
+
+	<p>Software bugs are impossible to avoid, so using good debugging strategies is a must. Some good ones are:</p>
+
+	<ul>
+		<li>Examine error messages when programs crash - googling the message often provides a clue or two as to what is going wrong.</li>
+		<li>Make use of example code and modify to suit your needs.</li>
+		<li>When using example code, always confirm that it first behaves as you expect. While it might not already have bugs, it could have behavior you don't expect and won't work when modified.</li>
+		<li>Insert debugging print statement to track variables within your code. Often this will isolate where things are going wrong</li>
+		<li>Track versions of your code and try different things - don't just delete code that isn't working and start over.</li>
+	</ul>
+</div>
+
+<div class="section">
+	<h2 id="how-solve-problems">How to Solve Problems</h2>
+
+	<p>Three steps required to solve problems are:</p>
+
+	<ol>
+		<li>Define the inputs</li>
+		<li>Define the outputs</li>
+		<li>Solve the problem</li>
+	</ol>
+
+	<p>Obviously solving the problem will almost always take the most time, but if you don't define the problem accurately, solving it will be very difficult.</p>
+
+	<p>Once these initial steps are complete, begin structuring a solution. Write pseudo-code to deal with basic cases and start testing and expanding the code until it can solve more difficult cases.</p>
+</div>
+
+<h1>Intro to Programming Stage 3</h1>
+<div class="section">
+	<h2 id="object-oriented">What is Object Oriented Programming?</h2>
+
+	<p>Object Oriented Programming (OOP) is a programming technique most useful for approaching and developing large projects. It revolves around the uses of <em>Classes</em>, which are like blueprints, for creating <em>Objects</em>, which are like specific buildings, made from those blueprints.</p>
+
+	<p>Software written in an OOP paradigm is developed with many objects that interact with eachother - sending and receiving information - as opposed to non-OOP programming which is largely a collection of functions, or most simply a set of commands or logical operations. Each object in a large software package is essentially an independant machine, capable of performing a particular role in the overall picture. This modularity is key to the ease of development of OOP code, and also promotes greater reliability, speed of development, and ease of maintenance as the code base grows.</p>
+
+</div>
+
+<div class="section">
+	<h2 id="class-objects">Classes and Objects</h2>
+
+	<p>It's probably easiest to approach these ideas using examples. Let's design a Class called <em>Animal</em>. In Python we define a class as follows:</p>
+
+	<p><code>Class Animal():<br>
+		def __init__(self, name, gender, age):<br>
+		&nbsp;&nbsp;self.name = name<br>
+		&nbsp;&nbsp;self.gender = gender<br>
+		&nbsp;&nbsp;self.age = age<br></code></p>
+
+	<p>The Animal Class is pretty simple. It consists of the Animal's name, gender and weight (the __init__ function is how you build one). It's a pretty basic blueprint for an Animal. If we actually want to <em>construct</em> an Animal we do so as follows:</p>
+
+	<p><code>Jeff = Animal("Jeff", "male", 6)</code></p>
+
+	<p>Here we have created an animal called Jeff who is male and 6 years old (we call these <em>instance variables</em>). Jeff is an <em>isntance</em> of Class Animal. That's it - we've created an Animal! What's going on underneath the surface? Well, when we create Jeff we initialized him or constructed him with the __init__ function. This function allocates some memory for the object to exist in and Jeff will be available for us to use going forward.</p>
+</div>
+
+<div class="section">
+	<h2 id="class-methods">Class Methods</h2>
+
+	<p>So far we've laid out what a Class is, and how to build an instance of one, which is an object. But all we've seen so far is basically how to create our own data structure - an Animal - which has 3 variables. The power of Object Oriented Programming comes from <em>Class Methods</em>. Let's build one.</p>
+
+	<p><code>Class Animal():<br>
+		def __init__(self, name, gender, age):<br>
+		&nbsp;&nbsp;self.name = name<br>
+		&nbsp;&nbsp;self.gender = gender<br>
+		&nbsp;&nbsp;self.age = age<br><br>
+		def say_name_and_age():<br>
+		&nbsp;&nbsp;print("Hello, my name is " + self.name + ". I am " + self.age + " years old.")</code></p>
+
+	<p>We've added a Method to our definition for Class Animal. As it turns out our kind of animals can talk. Here's how we call the method on Jeff, the animal we previously created:</p>
+
+	<p><code>Jeff.say_name_and_age()</code></p>
+
+	<p>The output of that code would be exactly what you'd expect! This is an extremely useful tool because of the abstraction it allows. So long as a programmer gets access to the Animal Class (most commonly they are stored in <em>libraries</em> which can be easily imported) he or she is free to use Animals however they want. Most critically, the programmer doesn't need to know <em>how</em> the Class actually works underneath the surface - say the exact nature of the data structures used, or the code that goes into the various methods. All he or she needs to know is what the functions do and how to use them.</p>
+</div>
+
+<div class="section">
+	<h2 id="inheritance">Inheritance</h2>
+
+	<p>Inheritance is actually a very intuitive idea. It allows us to create new Classes (and corresponding Objects) which <em>inherit</em> all the properties and methods of their parents. An example may be useful:</p>
+
+	<p><code>Class Mammal(Animal):<br>
+		def __init__(self, name, gender, age, fur):<br>
+		&nbsp;&nbsp;Animal.__init__(self, name, gender, age)<br>
+		&nbsp;&nbsp;self.fur = fur<br></code></p>
+
+	<p>Above we have defined a new Class Mammal which inherits Class Animal. Class Mammal has all the variables and methods of Class Animal but it also has the boolean variable <code>fur</code>. When an instance of a Mammal Class is created the constructor first creates an Animal, then extends the Object to become a Mammal.</p>
+</div>
+
+<div class="section">
+
+	<h2 id="benefits">Benefits of the OOP Paradigm</h2>
+
+	<ul>
+		<li><em>Productivity: </em>Classes and their objects are modules - they can be developed on their own, perhaps by one team, and used by another many times. This makes it easier to separate software development duties across many employees. They are extensible - it is simple to add greater functionality to Classes through the addition of new capabilities or inheritance. And they are reusable - new Objects can be created using the Class definitions all over a software development project, even to serve different purposes.</li>
+		<li><em>Maintenance: </em>Again, thanks to their modularity, object-oriented software can be easier to maintain as the chunks in need of repair or upgrade can get the attention without impacting the rest of the code</li>
+		<li><em>Speed of Development: </em>The modularity and reusability of OOP development can also increase the speed of development as code is easily reused and modified.</li>
+		<li><em>Cost of development: </em>Faster development invariably lowers the cost of development with fewer man-hours to the process.</li>
+		<li><em>Quality: </em>Developers can also choose to direct saved resources toward QA - ultimately increasing its reliability.</li>
+	</ul>
+</div>
+
+<div class="section">
+	<h2 id ="connections">Making Connections</h2>
+
+	<p>We've already used some of the principals of Object Oriented Programming and abstraction. CSS classes for example use the principal of inheritance. The CSS style sheet for this page defines a font-color for the <code>body</code> of the page. Everything within the body <em>inherits</em> that font color - even sections of class <code>code</code>.</p>
+
+	<p>More generally, HTML and CSS allows us with the power of abstraction to build pages far beyond our own capabilities (and time). For example, right below this text is a Youtube video which can be played. The code required (on my part, the author of the page) is extremely simple, it's only a few lines. But, beneath the surface, abstracted away from me, is many more lines of (more complicated) code covering everything from making a connection to a 3rd party website, to actually displaying thousands of pixels 30 times a second (or if you get down to it operating a webs browser, an operating system, a BIOS and well, you get the idea.). Without abstraction, we'd constantly be reinventing every programming wheel, never getting very far.</p>
+
+	<div class="container"><iframe width="560" height="315" seamless src="https://www.youtube.com/embed/BhMSzC1crr0"></iframe></div>
+
+</div>
+
+<h1>Intro to Programming Stage 4</h1>
+
+<div class="section">
+	<h2 id="Servers">Networks, Servers, and the Internet</h2>
+
+	<p>A network is defined as any group of entities that are able to communicate with eachother despite not all being directly connected. For example a direct connection between A and B would not be a network. Nor would direct connections between A and B, B and C, and A and C. <em>But</em>, if A and C weren't directly connected, but were somehow able to communicate via B, that would be a network.</p>
+
+	<p>Key terms for measuring networks are <em>Latency</em> and <em>Bandwidth</em>. Latency measures the time it takes for messages to get from their source to destination - for the internet this is measured in milliseconds. Bandwidth is the amount of information that can be transmitted per unit time - typically measured in Mbps (million bits per second) for the internet.</p>
+
+	<p>The primary protocol that the internet runs on is <em>HTTP (Hypertext Transfer Protocol)</em>. HTTP exists primarily to allow clients and servers to communicate and transmit data.</p>
+
+	<p>The main purpose of a <em>server</em> is to send documents to clients. It does this by responding to HTTP requests. A typical HTTP request from a client would look like this:</p>
+
+	<p><code>http://example.com/foo?p=1&q=neat</code></p>
+
+	<p>The 'http://' section indicates the communication protocol. 'Example.com' indicates the host, and '/foo' is the path. The values p and q following the question mark are <em>parameters</em>. Assuming a valid connection has been made, the server will send the document located at the indicated path and/or generate a new document depending on if the content is <em>static</em> or <em>dynamic</em>. The parameters will be used by the server for additional information - perhaps they are the output of a form that will customize the content to be sent to the client.</p>
+
+	<p>Once the server has processed the HTTP request it will send a response (and if possible, whatever is requested). That is the basic functionaility of servers and HTTP - obviously the nitty gritty is far more in depth.</p>
+
+</div>
+
+<div class="section">
+	<h2 id="Validating input">Validating User Input</h2>
+
+	<p>Although in the past the Internet was primarily used simply to deliver static documents, images, data etc. to client browsers, today the vast majority of websites are dynamic applications - generating content and interacting with users on the fly. At the most basic level this is simply allowing the user to give some input to the application which will be stored or used in some way. Care must be taken however to validate whatever input the user sends.</p>
+
+	<p>User experience - imagine a to-do list webb application which allows the user to keep track of tasks they need to do. Input could be as simple as some text describing the task and a date the task needs to be completed by. The to-do list allows the user to sort their to-do list by due date. All is fine and we can imagine a simple database that will serve this purpose well. But, what if during entering a task the user typed 'June 1 2016' as the due date instead of the accepted date format '1/6/2016'? This could easily cause the simple app to crash or be unable to sort the tasks as the database tries to assign an unfamiliar date format to an entry.</p>
+
+	<p>Security - far more problematic than causing a user to unable to use an app or getting garbled information back are potential security threats from not validating user input. For example, a web app for accessing a large database of user data could be comprimised through an SQL injection attack as described <a href="http://www.w3schools.com/sql/sql_injection.asp">here</a>. Basically the malicious user submits code which could be inadvertently run by the application - in this case to expose an entire database.</p>
+
+	<p>Input validation techniques  - In order to improve a user's experience every input should first be checked for any errors - for example making sure an expected integer input doesn't contain a non-digit input. If the input is invalid the user should receive an error message (which hopefully describes the error or nature of the invalid input) and allowed to reenter their input. This can be accomplished with redirection handlers or optional parameters. For example, in the latter case, a detected error would cause the page to re-render, but an optional 'error message' parameter would be passed. Upon recognizing the parameter the page would render along with the error message.</p>
+
+	<p>'Escaping' - Because the primary security threat caused by improperly validating user input is the injection of code (HTML, javascript, SQL etc.) into a webapp, simply ignoring special characters in user input will go a long way toward securing a web app. This can be done manually by searching inputted strings for these characters and replacing with their <em>escape</em> character - for example, searching input for '&gt;' and '&lt;' characters and replacing with their respective excape characters will prevent any HTML tags from garbling output. However, a more powerful solution is to make use of libraries which will automatically do this for you like cgi.escape or the autoescape flag in jinja2.</p>
+</div>
+
+<div class="section">
+	<h2 id="Templates">Templates</h2>
+
+	<p>Web applications that need to generate HTML and text, quickly become unweildy and prone to bugs. Keeping track of long strings that are passed between handlers or manipulated by regular expressions eventually becomes effectively impossible for large projects. Templates are the solution. They exist to make it easy to build complicated strings (HTML code) that will be rendered by a web browser. We've used jinja2 (built into the Google App Engine) in this course. Jinja2 allows you to easily insert variables, and execute basic code within documents.</p>
+
+	<p>One of the key benefits of templates is the avoidance of repetition. For example, templates can <em>inherit</em> from one another - say a base template which contains the header and footer of a page which will always be present could be inherited by several different 'content' templates. The header and footer will always match the base template, and if a change needs to be made to the footer it can be done in the base template and the corresponding change would be reflected in every template that inherited (perhaps hundreds or thousands for large websites).</p>
+</div>
+
+{% endblock %}

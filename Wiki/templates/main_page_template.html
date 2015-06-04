@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Welcome to Cameron's Wikipedia</h1>
+	<table>
+		<ul>
+			{% for wiki in wiki_list %}
+				<li><a href=/{{wiki}}>{{wiki}}</a></li>
+			{% endfor %}
+		</ul>
+	</table>
+
+{% endblock %}

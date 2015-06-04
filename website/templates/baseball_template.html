@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>Baseball player database</h1>
+
+<!-- form for sorting the player database. Sort style parameter is added to the URL for a GET request. -->
+<form action = "/baseball" method = "get">
+	<select type="text" name="sort_style">
+		<option value="name">Name</option>
+		<option value="plate_appearances">Plate Appearances</option>
+		<option value="hits">Hits</option>
+		<option value="walks">Walks</option>
+		<option value="batting_average">Batting Average</option>
+		<option value="on_base_percentage">On Base Percentage</option>
+	</select>
+	<button>Sort</button>
+</form>
+<br>
+
+<!--Loop through the database and display it -->
+<div class="baseball">
+	<table>
+		<tr>
+			<th>Player</th>
+			<th>PAs</th>
+			<th>Hits</th>
+			<th>Walks</th>
+			<th>Batting Avg.</th>
+			<th>OBP</th>
+		</tr>
+	{% if players %}
+
+		{% for player in players %}
+			<tr>
+				<td>{{ player.name }}</td>
+				<td>{{ player.plate_appearances }}</td>
+				<td>{{ player.hits }}</td>
+				<td>{{ player.walks }}</td>
+				<td>{{ player.batting_average }}</td>
+				<td>{{ player.on_base_percentage }}</td>
+			</tr>
+		{% endfor %}
+
+	{% endif %}
+	</table>
+</div>
+
+<!--Form for adding players to the database -->
+<form action = "/baseball" method = "post">
+	<h2>Add a player</h2>
+	<input type="text" name="player_name" placeholder="Player name">
+	<input type="number" name="plate_appearances" placeholder="Plate appearances">
+	<input type="number" name="hits" placeholder="Hits">
+	<input type="number" name="walks" placeholder="Walks">
+
+	<button>Add</button>
+</form>
+
+<!--If an error message is passed to the template, display it here -->
+<p><em>{{ error_msg }}</em></p>
+
+
+{% endblock %}

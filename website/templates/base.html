@@ -1,0 +1,23 @@
+<!-- Base template -->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cameron's Nanodegree</title>
+		<meta charset="utf-8">
+  		<link type="text/css" rel="stylesheet" href="/stylesheets/style.css"/>
+	</head>
+
+	<body>
+		<div class="document">
+			{% block content %}
+			{% endblock %}
+
+			<!--Basic footer keeps track of all the pages-->
+			<div class="footer">
+				<a href="/">Home</a> <a href="/class_notes"> Class Notes</a> <a href="/auto_generated"> Auto-Generated Class notes</a>  <a href="/baseball"> Baseball page</a>
+
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1> Intro to Programming Unit 1</h1>
+
+<!--Loop through the concepts passed to the template and render them appropriately-->
+{% for concept in concepts %}
+	<div class="section">
+	  <h2>
+	    {{ concept[0] }}
+	  </h2>
+	  {{ concept[1] }}
+	</div>
+{% endfor %}
+
+{% endblock %}

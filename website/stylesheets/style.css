@@ -1,0 +1,80 @@
+body {
+	font-family: sans-serif;
+	color: #19446e; /*brownish yellow */
+	background-color: #eee; /*-grey */
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+}
+
+h2 {
+	margin: 10px;
+}
+
+p {
+	margin: 10px 0;
+}
+
+/*style for displaying code snippets*/
+code {
+	font-family: courier;
+	font-weight: bold;
+	padding-left: 3px;
+	padding-right: 3px;
+	background-color: #ccc;
+}
+
+
+/*main document style*/
+.document {
+	background-color: #ead4ae;
+	padding: 10px;
+	width: 800px;
+	position: center;
+	margin: auto;
+}
+
+/*style for each content section*/
+.section {
+	background-color: #d5e7e3;
+	border-color: #6b6;
+	border: solid 0.2em;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+}
+
+/*container for placing videos etc.*/
+.container {
+	text-align: center;
+}
+
+/*formatting for baseball player summary*/
+.baseball {
+	text-align: right;
+	background-color: white;
+	border: solid 0.2em;
+	background-color: #d5e7e3
+}
+
+.footer {
+	font-size: large;
+	text-align: center;
+	background-color: #ead4ae;
+	border: solid 0.2em;
+	padding: 10px;
+	margin: 10px;
+	margin-bottom: 5px;
+}
+
+
+
+table td {
+padding-right: 20px;
+}
+
+table th {
+padding-right: 0px;
+}

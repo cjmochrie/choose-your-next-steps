@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Intro to Databases</h1>
+
+<div class="section">
+	<h2 id="overview">Overview</h2>
+	<p>Karl Krueger's intro to relational databases was a very quick intro, but got me started in using postgresql on a paractical basis. Some of the topics included were:
+		<ul>
+			<li>SQL stored data tpes</li>
+			<li>Python API for SQLite and postgresql</li>
+			<li>The idea of a transaction and the requirement to 'commit' changes to a db</li>
+			<li>Escaping database inserts with data to avoid injection attacks using the Python library Bleach</li>
+			<li>The concept of normalized forms and building larger database structures using foreign keys</li>
+			<li>Using the different types of joins and self joins - I wish this section was longer and with more practice. Joins are tricky</li>
+			<li>A brief look at subqueries and views</li>
+		</ul>
+	<p>The final project was required me to implement several functions to interact with a database to support a Swiss Bracket tournament. It would have been neat to have more testing code available to make it a little easier to implement additional functionality, but otherwise was a cool practical application of SQL.</p>
+
+</div>
+
+{% endblock %}

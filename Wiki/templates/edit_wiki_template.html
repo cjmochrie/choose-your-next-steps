@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{title}}</h2>
+
+<form method="post">
+	<input type='hidden' name='title' value={{title}}>
+	<table>
+
+		<tr>
+			<td class = label>
+				Content
+			</td>
+			<td>
+				<textarea rows='10' cols='50' name="content">{{content | safe}}</textarea>
+			</td>
+		</tr>
+	</table>
+	<input type="submit">
+</form>
+
+
+{% endblock %}
